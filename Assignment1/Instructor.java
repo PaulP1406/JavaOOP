@@ -1,3 +1,4 @@
+package Assignment1;
 public class Instructor extends Person {
     private String eId; // Short for employee's ID
 

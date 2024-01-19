@@ -1,3 +1,4 @@
+package Assignment1;
 public class Student extends Person {
     private String sID; // Short for student's ID
     private String grade; // Grade is in letter grade, from A+ to F
