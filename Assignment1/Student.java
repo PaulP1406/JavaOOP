@@ -1,7 +1,9 @@
 package Assignment1;
+
 public class Student extends Person {
     private String sID; // Short for student's ID
     private String grade; // Grade is in letter grade, from A+ to F
+    private String details = "Student"; 
 
     // Constructor
     public Student(String name, String email, String studentId, String grade) {
@@ -31,5 +33,9 @@ public class Student extends Person {
     // Get ID method implementation
     public String getId() {
         return getsID();
+    }
+
+    public String getDetails() {
+        return details;
     }
 }

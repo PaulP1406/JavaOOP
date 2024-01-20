@@ -1,6 +1,8 @@
 package Assignment1;
+
 public class Instructor extends Person {
     private String eId; // Short for employee's ID
+    private String details = "Instructor";
 
     // Constructor
     public Instructor(String name, String email, String employeeId) {
@@ -20,5 +22,9 @@ public class Instructor extends Person {
     // Get ID method implementation
     public String getId() {
         return getEid();
+    }
+
+    public String getDetails() {
+        return details;
     }
 }
