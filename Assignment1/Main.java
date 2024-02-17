@@ -19,7 +19,7 @@ public class Main {
         people.add(new Instructor("Carol White", "mno5@sfu.ca", "E30159994258"));
 
         // Students
-        people.add(new Student("Paul", "ddp4@sfu.ca", "301539489", "A")); //This one is my details
+        people.add(new Student("Paul", "ddp4@sfu.ca", "301539489", "A")); // This one is my details
         people.add(new Student("Robson Green", "pqr6@sfu.ca", "3015394891", "B+"));
         people.add(new Student("Lisa Gray", "stu7@sfu.ca", "3015394892", "F"));
         people.add(new Student("Kevin Black", "vwx8@sfu.ca", "3015394893", "C-"));
