@@ -1,13 +1,14 @@
 package com.SimonFraserUniversity.DucDuyPham;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class App {
+    public static void main(String[] args) {
+         MazeFactory factory = new MazeFactory();
+         MazeGame game = new MazeGame();
+         game.createMaze(factory);
+
+        //EnchantedMazeFactory factory2 = new EnchantedMazeFactory();
+        //MazeGame game2 = new MazeGame();
+        //game2.createMaze(factory2);
+
     }
 }
