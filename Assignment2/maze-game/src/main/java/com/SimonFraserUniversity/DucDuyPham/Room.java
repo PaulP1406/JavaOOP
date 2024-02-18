@@ -1,6 +1,7 @@
 package com.SimonFraserUniversity.DucDuyPham;
 
 /**
+ * Abstract product class
  * Represents a room in the maze. Each room has four sides that can be either a
  * wall or a door.
  */
@@ -63,7 +64,7 @@ public class Room extends MapSite {
     }
 
     /**
-     * Returns a string representation of the room element, with the room number
+     * Provide a string representation of the room element, with the room number
      * 
      * @return A string that represents the room number.
      */
