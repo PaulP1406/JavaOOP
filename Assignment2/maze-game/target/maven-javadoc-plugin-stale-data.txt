@@ -1,0 +1,43 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/Acer/276Assignments/Assignment2/maze-game/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Acer/276Assignments/Assignment2/maze-game/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'maze-game 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'maze-game 1.0-SNAPSHOT API'
+com.SimonFraserUniversity.DucDuyPham
+C:\Users\Acer\276Assignments\Assignment2\maze-game\src\main\java = 1708203568544
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\allclasses-index.html = 1708244567314
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\allpackages-index.html = 1708244567350
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\copy.svg = 1708244567648
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\element-list = 1708244566242
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\help-doc.html = 1708244567640
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\index-all.html = 1708244567513
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\index.html = 1708244567562
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\link.svg = 1708244567650
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\member-search-index.js = 1708244567364
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\module-search-index.js = 1708244567356
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\overview-tree.html = 1708244566949
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\package-search-index.js = 1708244567359
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\script.js = 1708244567646
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\search-page.js = 1708244567655
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\search.html = 1708244567543
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\search.js = 1708244567653
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\stylesheet.css = 1708244567643
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\tag-search-index.js = 1708244567367
+C:\Users\Acer\276Assignments\Assignment2\maze-game\target\site\apidocs\type-search-index.js = 1708244567361
