@@ -1,6 +1,19 @@
 package com.SimonFraserUniversity.DucDuyPham;
 
+/**
+ * The MazeGame class is creates and initializes the mazes with rooms, doors,
+ * and walls with a template.
+ */
 public class MazeGame {
+    /**
+     * Creates a maze using the specified factory, can be either normal or
+     * enchanted. The method sets up the maze with two rooms and a door between them.
+     * Each room is surrounded by walls on all sides except for the side with the
+     * door.
+     *
+     * @param factory The MazeFactory used to create the maze components.
+     * @return The fully initialized maze.
+     */
     public Maze createMaze(MazeFactory factory) {
         Maze maze = factory.makeMaze();
         Room room1 = factory.makeRoom();
