@@ -12,9 +12,10 @@ class QuickSorterTest {
     void setUp() {
         sorter = new QuickSort<>();
     }
-
+    
+    //Functional test cases, 13 in total
     @Test
-    void testSortWithNegativeNumbers() {
+    void NegativeNumbers() {
         Integer[] arr = { -3, -1, -4, -2 };
         sorter.sort(arr);
         Integer[] expected = { -4, -3, -2, -1 };
@@ -22,7 +23,7 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithMixedPositiveAndNegativeNumbers() {
+    void MixedPositiveAndNegativeNumbers() {
         Integer[] arr = { 3, -1, 4, -2 };
         sorter.sort(arr);
         Integer[] expected = { -2, -1, 3, 4 };
@@ -30,23 +31,23 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithDuplicates() {
-        Integer[] arr = { 5, 3, 3, 2, 5 };
+    void Duplicates() {
+        Integer[] arr = { 5, 3, 3, 9, 9 };
         sorter.sort(arr);
-        Integer[] expected = { 2, 3, 3, 5, 5 };
+        Integer[] expected = { 3, 3, 5, 9, 9 };
         assertArrayEquals(expected, arr);
     }
 
     @Test
-    void testSortWithAllElementsSame() {
-        Integer[] arr = { 1, 1, 1, 1 };
+    void ElementsSame() {
+        Integer[] arr = { 2, 2, 2, 2 };
         sorter.sort(arr);
-        Integer[] expected = { 1, 1, 1, 1 };
+        Integer[] expected = { 2, 2, 2, 2 };
         assertArrayEquals(expected, arr);
     }
 
     @Test
-    void testSortWithLargeNumbers() {
+    void LargeNumbers() {
         Integer[] arr = { Integer.MAX_VALUE, 0, Integer.MIN_VALUE, Integer.MAX_VALUE - 1 };
         sorter.sort(arr);
         Integer[] expected = { Integer.MIN_VALUE, 0, Integer.MAX_VALUE - 1, Integer.MAX_VALUE };
@@ -54,7 +55,7 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithAllZeroes() {
+    void AllZeroes() {
         Integer[] arr = { 0, 0, 0, 0 };
         sorter.sort(arr);
         Integer[] expected = { 0, 0, 0, 0 };
@@ -62,7 +63,7 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithSortedArray() {
+    void SortedArray() {
         Integer[] arr = { 1, 2, 3, 4 };
         sorter.sort(arr);
         Integer[] expected = { 1, 2, 3, 4 };
@@ -70,7 +71,7 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithReverseOrderedArray() {
+    void ReverseOrderedArray() {
         Integer[] arr = { 4, 3, 2, 1 };
         sorter.sort(arr);
         Integer[] expected = { 1, 2, 3, 4 };
@@ -78,7 +79,7 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithRandomOrder() {
+    void RandomOrder() {
         Integer[] arr = { 2, 3, 1, 4, 5 };
         sorter.sort(arr);
         Integer[] expected = { 1, 2, 3, 4, 5 };
@@ -86,16 +87,16 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithStringArray() {
-        Sorter<String> stringSorter = new QuickSort<>();
+    void StringArray() {
+        Sorter<String> sorter2 = new QuickSort<>();
         String[] arr = { "cmpt276", "cmpt378", "cmpt291", "cmpt300" };
-        stringSorter.sort(arr);
-        String[] expected = { "cmpt276", "cmpt278", "cmpt291", "cmpt300"};
+        sorter2.sort(arr);
+        String[] expected = { "cmpt276", "cmpt291", "cmpt300", "cmpt378"};
         assertArrayEquals(expected, arr);
     }
 
     @Test
-    void testSortWithOddNumberOfElements() {
+    void OddNumberOfElements() {
         Integer[] arr = { 3, 1, 2 };
         sorter.sort(arr);
         Integer[] expected = { 1, 2, 3 };
@@ -103,7 +104,7 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithEvenNumberOfElements() {
+    void EvenNumberOfElements() {
         Integer[] arr = { 4, 2, 3, 1 };
         sorter.sort(arr);
         Integer[] expected = { 1, 2, 3, 4 };
@@ -111,7 +112,7 @@ class QuickSorterTest {
     }
 
     @Test
-    void testSortWithLongArray() {
+    void LongArray() {
         Integer[] arr = new Integer[100];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = arr.length - i;
@@ -121,5 +122,27 @@ class QuickSorterTest {
             assertEquals(i + 1, arr[i]);
         }
     }
+    
+    //Structural test cases:
+    //Pivot related tests: (The last element is the pivot in this algorithm)
+    @Test
+    void PivotAsSmallestElement() {
+        Integer[] arr = {4, 3, 2, 5, 1};
+        sorter.sort(arr);
+        Integer[] expected = {1, 2, 3, 4, 5};
+        assertArrayEquals(expected, arr);
+    }
+
+    @Test
+    void PivotAsLargestElement() {
+        Integer[] arr = {4, 2, 3, 1, 5}; 
+        sorter.sort(arr);
+        Integer[] expected = {1, 2, 3, 4, 5};
+        assertArrayEquals(expected, arr);
+    }
+    
+    
+
+    
 
 }
