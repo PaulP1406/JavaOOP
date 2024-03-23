@@ -15,110 +15,110 @@ class QuickSorterTest {
 
     @Test
     void testSortWithNegativeNumbers() {
-        Integer[] array = {-3, -1, -4, -2};
-        sorter.sort(array);
-        Integer[] expected = {-4, -3, -2, -1};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { -3, -1, -4, -2 };
+        sorter.sort(arr);
+        Integer[] expected = { -4, -3, -2, -1 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithMixedPositiveAndNegativeNumbers() {
-        Integer[] array = {3, -1, 4, -2};
-        sorter.sort(array);
-        Integer[] expected = {-2, -1, 3, 4};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 3, -1, 4, -2 };
+        sorter.sort(arr);
+        Integer[] expected = { -2, -1, 3, 4 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithDuplicates() {
-        Integer[] array = {5, 3, 3, 2, 5};
-        sorter.sort(array);
-        Integer[] expected = {2, 3, 3, 5, 5};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 5, 3, 3, 2, 5 };
+        sorter.sort(arr);
+        Integer[] expected = { 2, 3, 3, 5, 5 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithAllElementsSame() {
-        Integer[] array = {1, 1, 1, 1};
-        sorter.sort(array);
-        Integer[] expected = {1, 1, 1, 1};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 1, 1, 1, 1 };
+        sorter.sort(arr);
+        Integer[] expected = { 1, 1, 1, 1 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithLargeNumbers() {
-        Integer[] array = {Integer.MAX_VALUE, 0, Integer.MIN_VALUE, Integer.MAX_VALUE - 1};
-        sorter.sort(array);
-        Integer[] expected = {Integer.MIN_VALUE, 0, Integer.MAX_VALUE - 1, Integer.MAX_VALUE};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { Integer.MAX_VALUE, 0, Integer.MIN_VALUE, Integer.MAX_VALUE - 1 };
+        sorter.sort(arr);
+        Integer[] expected = { Integer.MIN_VALUE, 0, Integer.MAX_VALUE - 1, Integer.MAX_VALUE };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithAllZeroes() {
-        Integer[] array = {0, 0, 0, 0};
-        sorter.sort(array);
-        Integer[] expected = {0, 0, 0, 0};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 0, 0, 0, 0 };
+        sorter.sort(arr);
+        Integer[] expected = { 0, 0, 0, 0 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithSortedArray() {
-        Integer[] array = {1, 2, 3, 4};
-        sorter.sort(array);
-        Integer[] expected = {1, 2, 3, 4};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 1, 2, 3, 4 };
+        sorter.sort(arr);
+        Integer[] expected = { 1, 2, 3, 4 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithReverseOrderedArray() {
-        Integer[] array = {4, 3, 2, 1};
-        sorter.sort(array);
-        Integer[] expected = {1, 2, 3, 4};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 4, 3, 2, 1 };
+        sorter.sort(arr);
+        Integer[] expected = { 1, 2, 3, 4 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithRandomOrder() {
-        Integer[] array = {2, 3, 1, 4, 5};
-        sorter.sort(array);
-        Integer[] expected = {1, 2, 3, 4, 5};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 2, 3, 1, 4, 5 };
+        sorter.sort(arr);
+        Integer[] expected = { 1, 2, 3, 4, 5 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithStringArray() {
         Sorter<String> stringSorter = new QuickSort<>();
-        String[] array = {"banana", "apple", "mango", "cherry"};
-        stringSorter.sort(array);
-        String[] expected = {"apple", "banana", "cherry", "mango"};
-        assertArrayEquals(expected, array);
+        String[] arr = { "cmpt276", "cmpt378", "cmpt291", "cmpt300" };
+        stringSorter.sort(arr);
+        String[] expected = { "cmpt276", "cmpt278", "cmpt291", "cmpt300"};
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithOddNumberOfElements() {
-        Integer[] array = {3, 1, 2};
-        sorter.sort(array);
-        Integer[] expected = {1, 2, 3};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 3, 1, 2 };
+        sorter.sort(arr);
+        Integer[] expected = { 1, 2, 3 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithEvenNumberOfElements() {
-        Integer[] array = {4, 2, 3, 1};
-        sorter.sort(array);
-        Integer[] expected = {1, 2, 3, 4};
-        assertArrayEquals(expected, array);
+        Integer[] arr = { 4, 2, 3, 1 };
+        sorter.sort(arr);
+        Integer[] expected = { 1, 2, 3, 4 };
+        assertArrayEquals(expected, arr);
     }
 
     @Test
     void testSortWithLongArray() {
-        Integer[] array = new Integer[100];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = array.length - i;
+        Integer[] arr = new Integer[100];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr.length - i;
         }
-        sorter.sort(array);
-        for (int i = 0; i < array.length; i++) {
-            assertEquals(i + 1, array[i]);
+        sorter.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            assertEquals(i + 1, arr[i]);
         }
     }
 
