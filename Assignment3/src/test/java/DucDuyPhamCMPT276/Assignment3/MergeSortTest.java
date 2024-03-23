@@ -123,4 +123,31 @@ public class MergeSortTest {
 	            assertEquals(i + 1, arr[i]);
 	        }
 	    }
+	    
+	    //Structural tests:
+	    @Test
+	    void tOddLengthArray() {
+	        Integer[] arr = {3, 1, 2, 5, 4, 6, 7};
+	        sorter.sort(arr);
+	        Integer[] expected = {1, 2, 3, 4, 5, 6, 7};
+	        assertArrayEquals(expected, arr);
+	    }
+
+	    @Test
+	    void EvenLengthArray() {
+	        Integer[] arr = {8, 4, 2, 6, 1, 5, 3, 7};
+	        sorter.sort(arr);
+	        Integer[] expected = {1, 2, 3, 4, 5, 6, 7, 8};
+	        assertArrayEquals(expected, arr);
+	    }
+	    
+	    @Test
+	    void NearlySortedArray() {
+	        Integer[] arr = {1, 2, 3, 5, 4, 6, 7};
+	        sorter.sort(arr);
+	        Integer[] expected = {1, 2, 3, 4, 5, 6, 7};
+	        assertArrayEquals(expected, arr);
+	    }
+
+
 }
