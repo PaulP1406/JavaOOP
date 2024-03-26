@@ -148,6 +148,13 @@ public class MergeSortTest {
 	        Integer[] expected = {1, 2, 3, 4, 5, 6, 7};
 	        assertArrayEquals(expected, arr);
 	    }
-
+	    
+	    @Test
+	    void reverseSortedArray() {
+	        Integer[] arr = {5, 4, 3, 2, 1};
+	        sorter.sort(arr);
+	        Integer[] expected = {1, 2, 3, 4, 5};
+	        assertArrayEquals(expected, arr);
+	    }
 
 }

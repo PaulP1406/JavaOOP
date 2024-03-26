@@ -12,8 +12,8 @@ class QuickSorterTest {
     void setUp() {
         sorter = new QuickSort<>();
     }
-    
-    //Functional test cases, 13 in total
+
+    // Functional test cases, 13 in total
     @Test
     void NegativeNumbers() {
         Integer[] arr = { -3, -1, -4, -2 };
@@ -91,7 +91,7 @@ class QuickSorterTest {
         Sorter<String> sorter2 = new QuickSort<>();
         String[] arr = { "cmpt276", "cmpt378", "cmpt291", "cmpt300" };
         sorter2.sort(arr);
-        String[] expected = { "cmpt276", "cmpt291", "cmpt300", "cmpt378"};
+        String[] expected = { "cmpt276", "cmpt291", "cmpt300", "cmpt378" };
         assertArrayEquals(expected, arr);
     }
 
@@ -122,28 +122,23 @@ class QuickSorterTest {
             assertEquals(i + 1, arr[i]);
         }
     }
-    
-    //Structural test cases:
-    //Pivot related tests: (The last element is the pivot in this algorithm)
+
+    // Structural test cases:
+    // Pivot related tests: (The last element is the pivot in this algorithm)
     @Test
     void PivotAsSmallestElement() {
-        Integer[] arr = {4, 3, 2, 5, 1};
+        Integer[] arr = { 4, 3, 2, 5, 1 };
         sorter.sort(arr);
-        Integer[] expected = {1, 2, 3, 4, 5};
+        Integer[] expected = { 1, 2, 3, 4, 5 };
         assertArrayEquals(expected, arr);
     }
 
     @Test
     void PivotAsLargestElement() {
-        Integer[] arr = {4, 2, 3, 1, 5}; 
+        Integer[] arr = { 4, 2, 3, 1, 5 };
         sorter.sort(arr);
-        Integer[] expected = {1, 2, 3, 4, 5};
+        Integer[] expected = { 1, 2, 3, 4, 5 };
         assertArrayEquals(expected, arr);
     }
-    
-    //
-    
-
-    
 
 }
