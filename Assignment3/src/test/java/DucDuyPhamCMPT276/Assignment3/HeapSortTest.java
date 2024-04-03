@@ -114,6 +114,35 @@ class HeapSortTest {
         }
     }
 
-    // Structural test cases for HeapSort
+   //Structural tests:
+    @Test
+    void testLargeArrayWithRepeatedElements() {
+        Integer[] arr = new Integer[1000];
+        // Fill the array with a repeated pattern
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i % 10; 
+        }
+        sorter.sort(arr);
+        assertTrue(isSorted(arr));
+    }
+    
+    @Test
+    void testArrayWithAlternatingHighAndLowValues() {       
+        Integer[] arr = new Integer[100];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (i % 2 == 0) ? i : -i; // Alternating positive and negative values
+        }
+        sorter.sort(arr);
+        assertTrue(isSorted(arr));
+    }
+
+    private <T extends Comparable<T>> boolean isSorted(T[] arr) {
+	    for (int i = 0; i < arr.length - 1; i++) {
+	        if (arr[i].compareTo(arr[i + 1]) > 0) {
+	            return false;
+	        }
+	    }
+	    return true;
+    }
     
 }
